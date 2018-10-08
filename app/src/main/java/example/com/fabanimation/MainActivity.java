@@ -79,13 +79,13 @@ public class MainActivity extends AppCompatActivity {
 
     private String getText(int code){
         switch(code){
-            case 1: return "Open Maps";
-                    
-            case 2: return "Open Messages";
-                    
-            case 3: return "Open Device Info";
-                    
-            default: return "";
+            case 1: return "Open Maps now";
+
+            case 2: return "Open Messages now";
+
+            case 3: return "Open Device Info now";
+
+            default: return "Invalid Input";
         }
     }
 
