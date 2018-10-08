@@ -60,20 +60,35 @@ public class MainActivity extends AppCompatActivity {
         Map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Open Maps", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getText(1), Toast.LENGTH_SHORT).show();
             }
         });
         Msg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Open Messages", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getText(2), Toast.LENGTH_SHORT).show();
             }
         });
         Info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Open Device Info", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getText(3), Toast.LENGTH_SHORT).show();
             }
         });
     }
+
+    private String getText(int code){
+        switch(code){
+            case 1: return "Open Maps";
+                    
+            case 2: return "Open Messages";
+                    
+            case 3: return "Open Device Info";
+                    
+            default: return "";
+        }
+    }
+
+
 }
+
